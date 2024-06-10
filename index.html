@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light"> 
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,7 @@
   </head>
   <body class="container mx-auto">
     <header>
+      <!-- nav section  -->
       <nav>
         <div class="navbar bg-base-100">
           <div class="navbar-start">
@@ -40,27 +41,126 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Home</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">About</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Destination</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Search</a></li>
+                <li>
+                  <a class="text-[18px] font-medium text-[#030712B3]">Home</a>
+                </li>
+                <li>
+                  <a class="text-[18px] font-medium text-[#030712B3]">About</a>
+                </li>
+                <li>
+                  <a class="text-[18px] font-medium text-[#030712B3]"
+                    >Destination</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[18px] font-medium text-[#030712B3]">Search</a>
+                </li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold text-[#030712]">eTicket Bus</a>
+            <a
+              class="btn btn-ghost text-2xl lg:text-4xl font-extrabold text-[#030712]"
+              >eTicket Bus</a
+            >
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Home</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">About</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Destination</a></li>
-                <li><a class="text-[18px] font-medium text-[#030712B3]">Search</a></li>
+              <li>
+                <a class="text-[18px] font-medium text-[#030712B3]">Home</a>
+              </li>
+              <li>
+                <a class="text-[18px] font-medium text-[#030712B3]">About</a>
+              </li>
+              <li>
+                <a class="text-[18px] font-medium text-[#030712B3]"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a class="text-[18px] font-medium text-[#030712B3]">Search</a>
+              </li>
             </ul>
           </div>
           <div class="navbar-end">
-            <a class="btn bg-[#1DD1001A] text-[18px] font-medium text-[#1DD100]">Bus <img src="./images/bus-icon.png" alt=""></a>
+            <a class="btn bg-[#1DD1001A] text-[18px] font-medium text-[#1DD100]"
+              >Bus <img src="./images/bus-icon.png" alt=""
+            /></a>
           </div>
         </div>
       </nav>
+
+      <!-- header section  -->
+      <section class="mt-5">
+        <div class="card m-4 lg:h-[450px] lg:p-0  bg-base-100 shadow-xl image-full lg:sticky">
+          <figure>
+            <img
+              class="w-full lg:h-[450px]"
+              src="./images/banner.png"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-12 justify-center text-6xl font-bold text-[#FFFFFF]"
+            >
+              End-to-End Travel with
+            </h2>
+            <h2
+              class="card-title mb-8 justify-center text-6xl font-bold text-[#1DD100]"
+            >
+              eTicket Bus
+            </h2>
+            <h4
+              class="lg:max-w-[60%] mx-auto mb-5 text-[18px] font-normal text-[#FFFFFF]"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </h4>
+
+            <div class="mt-5">
+              <button class="btn text-[20px] font-bold text-black bg-[#1DD100]">
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- three card section  -->
+         <section class="flex flex-col lg:flex lg:flex-row justify-around gap-5 mt-4 lg:-mt-16 mb-10 p-4">
+            <div class="card card-compact bg-base-100 shadow-xl">
+                   <div class="flex gap-2 p-4">
+                    <div>
+                        <img src="./images/people.png" alt="">
+                    </div>
+                    <div class="font_family_Inter">
+                        <h3 class="text-4xl font-bold text-[#030712]">500K+</h3>
+                        <p class="text-[18px] font-normal text-[#03071299]">Registered users</p>
+                    </div>
+                   </div>
+              </div>
+            <div class="card card-compact bg-base-100 shadow-xl">
+                   <div class="flex gap-2 p-4">
+                    <div>
+                        <img src="./images/ticket-cupon.png" alt="">
+                    </div>
+                    <div class="font_family_Inter">
+                        <h3 class="text-4xl font-bold text-[#030712]">1.7 lacks</h3>
+                        <p class="text-[18px] font-normal text-[#03071299]">Tickets sold</p>
+                    </div>
+                   </div>
+              </div>
+            <div class="card card-compact  bg-base-100 shadow-xl">
+                   <div class="flex gap-2 p-4">
+                    <div>
+                        <img src="./images/stoppage.png" alt="">
+                    </div>
+                    <div class="font_family_Inter">
+                        <h3 class="text-4xl font-bold text-[#030712]">80K+</h3>
+                        <p class="text-[18px] font-normal text-[#03071299]">Rental partners</p>
+                    </div>
+                   </div>
+              </div>
+         </section>
+      </section>
     </header>
     <main></main>
     <footer></footer>
