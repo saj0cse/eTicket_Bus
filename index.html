@@ -240,7 +240,7 @@
 
       <!-- main section eTicket Bus -->
       <section
-        class="bg-[#F7F8F8] border-2 border-t-green-500 rounded-t-[50px] mb-16"
+        class="bg-[#F7F8F8] border-2 border-t-green-500 rounded-t-[50px]"
       >
         <div class="container mx-auto p-3">
           <h2 class="text-4xl font-bold text-[#030712] text-center pt-[150px]">
@@ -263,10 +263,10 @@
                   <div class="flex gap-4 items-center">
                     <img src="./images/bus-logo.png" alt="" />
                     <div>
-                      <h3 class="text-3xl font-bold text-[#030712]">
+                      <h3 class="text-2xl lg:text-3xl font-bold text-[#030712]">
                         SAJ Paribahan
                       </h3>
-                      <p class="text-2xl font-normal text-[#03071299]">
+                      <p class="lg:text-2xl font-normal text-[#03071299]">
                         Coach-009-WEB ! AC_Business
                       </p>
                     </div>
@@ -285,22 +285,22 @@
                 <!-- route dhaka kushtia -->
                 <section class="bg-[#F7F8F8] mt-7 p-5 mb-5">
                   <!-- ----- -->
-                  <div class="flex justify-between items-center">
-                    <div class="text-2xl font-semibold text-[#03071299]">
+                  <div class="flex justify-between">
+                    <div class="lg:text-2xl font-semibold text-[#03071299]">
                       Route
                     </div>
-                    <div class="text-2xl font-semibold text-[#030712]">
+                    <div class="lg:text-2xl font-semibold text-[#030712]">
                       Dhaka - Kushtia
                     </div>
                   </div>
                   <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
                   <!-- ----- -->
                   <!-- ----- -->
-                  <div class="flex justify-between items-center">
-                    <div class="text-2xl font-semibold text-[#03071299]">
+                  <div class="flex justify-between">
+                    <div class="lg:text-2xl font-semibold text-[#03071299]">
                       Departure Time
                     </div>
-                    <div class="text-2xl font-semibold text-[#030712]">
+                    <div class="lg:text-2xl font-semibold text-[#030712]">
                       9:00 PM
                     </div>
                   </div>
@@ -338,13 +338,15 @@
             </div>
           </div>
         </div>
-      </section>
+      
 
       <!-- seat design section  -->
-      <section class="container mx-auto p-5 border">
+      <section class="container mx-auto p-5  flex flex-col lg:flex-row justify-between gap-8 mb-[100px] bg-white rounded-xl">
+        <div class=" flex-1">
+        <h2 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
         <!-- set design main div -->
         <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
-         <div class="flex "> <!-- add code justify-between --> 
+         <div class="flex justify-between"> <!-- add code justify-between --> 
           <div class="flex gap-2 items-center">
             <img src="./images/seat-gray.png" alt="">
             <h4>Available</h4>
@@ -355,7 +357,7 @@
           </div>
          </div>
          <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
-        <div class="flex">
+        <div class="flex justify-center">
           <!-- first part -->
           <div class="">
             <!-- driver icon  -->
@@ -363,7 +365,7 @@
               <div class="flex justify-end w-full">
                 <button
                   id="driver_iCon"
-                  class="btn w-[90px] bg-[#cccccc] px-8 py-3 mr-5 text-[#03071280] text-[18px] font-medium"
+                  class="btn w-[90px] bg-[#cccccc] px-8 py-3 mr-5 text-[#03071280] text-[18px] font-medium btn-disabled"
                 >
                   <svg
                     width="26.000000"
@@ -768,13 +770,89 @@
               </div>
             </div>
           </div>
-
-          <!-- second part  -->
-            <div>
-
-            </div>
-          <!-- .... -->
         </div>
+      </div>
+
+         <!-- second part  -->
+         <div class=" font_family_Inter">
+          <div></div>
+          <h2 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
+          <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
+          <div class="bg-[#F7F8F8] rounded-xl p-5">
+              <div class="flex justify-between">
+                <h2 class="text-[16px] font-medium text-[#030712]">Seat</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">Class</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">Price</h2>
+              </div>
+              <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
+              <!-- dynamic html create  -->
+              <div class="flex justify-between">
+                  <p class="text-[16px] font-normal text-[#03071299]">C2</p>
+                  <p class="text-[16px] font-normal text-[#03071299]">Economoy</p>
+                  <p class="text-[16px] font-normal text-[#03071299]">550</p>
+              </div>
+              <hr class=" bg-[#03071233] mt-4 mb-4" />
+              <!-- total calculation  -->
+              <div class="flex justify-between">
+                <h2 class="text-[16px] font-medium text-[#030712]">Total Price</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">BDT 1100</h2>
+              </div>
+              <!-- cupupon code apply  -->
+               <div class="mt-5 flex flex-col lg:flex-row justify-center items-center bg-white p-2 rounded-xl">
+                <input class="p-3 flex-1 rounded" type="text" name="" id="" placeholder="Have any copupon?">
+                <button class="btn bg-[#1DD100] px-8">Apply</button>
+               </div>
+                <!-- Grand total calculation  -->
+              <div class="flex justify-between mt-5">
+                <h2 class="text-[16px] font-medium text-[#030712]">Grand Total</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">BDT 1100</h2>
+              </div>
+          </div>
+
+          <!-- 2nd part  -->
+           <div class="mt-6 w-full ">
+            <!-- ----------------- -->
+            <label class="form-control w-full ">
+              <div class="label">
+                <span class="label-text text-[16px] font-semibold text-[#030712]">Passenger Name*</span>
+              </div>
+              <input type="text" placeholder="Enter your name" class="input input-bordered w-full" required />
+              <div class="label">
+              </div>
+            </label>
+            <!-- ----------- -->
+            <label class="form-control w-full p">
+              <div class="label">
+                <span class="label-text text-[16px] font-semibold text-[#030712]">Phone Number*</span>
+              </div>
+              <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full p" required />
+              <div class="label">
+              </div>
+            </label>
+            <!-- ------------- -->
+            <label class="form-control w-full p">
+              <div class="label">
+                <span class="label-text text-[16px] font-semibold text-[#030712]">Email ID</span>
+              </div>
+              <input type="text" placeholder="Enter your email id" class="input input-bordered w-full p" />
+              <div class="label">
+              </div>
+            </label>
+           </div>
+            <div class="w-full">
+              <button class="btn bg-[#1DD100] w-full">Next</button>
+            </div>
+            <!-- Terms and Conditions -->
+            <div class="mt-5 flex justify-around">
+              <a href="" class="text-[16px] font-semibold text-[#03071299] underline">Terms and Conditions</a>
+              <a href="" class="text-[16px] font-semibold text-[#03071299] underline">Cancellation Policy</a>
+            </div>
+
+        </div>
+      <!-- .... -->
+
+
+    </section>
       </section>
     </main>
     <footer></footer>
