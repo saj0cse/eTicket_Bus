@@ -180,10 +180,10 @@
         </h2>
 
         <!-- card  -->
-        <div class="mt-[80px] flex justify-between gap-10">
+        <div class="mt-[80px] flex flex-col lg:flex-row justify-between gap-10 p-5">
           <!-- first card  -->
           <div
-            class="bg-[#FFBF0F] rounded flex justify-around items-center flex-1"
+            class="bg-[#FFBF0F] rounded flex justify-around items-center flex-1 p-3"
           >
             <!-- 1st -->
             <div class="font_family_Inter">
@@ -203,7 +203,7 @@
           </div>
           <!-- second card  -->
           <div
-            class="bg-[#F78C9C] rounded flex justify-around items-center flex-1"
+            class="bg-[#F78C9C] rounded flex justify-around items-center flex-1 p-3"
           >
             <!-- 1st -->
             <div class="font_family_Inter">
@@ -232,7 +232,7 @@
 
       <!-- main section eTicket Bus -->
       <section class="bg-[#F7F8F8] border-2 border-t-green-500 rounded-t-[50px] mb-16">
-        <div class="container mx-auto">
+        <div class="container mx-auto p-3">
             <h2 class="text-4xl font-bold text-[#030712] text-center pt-[150px]">
                 eTicket Bus
               </h2>
@@ -244,13 +244,13 @@
 
 
               <!--  saj paribahan card design -->
-               <div class="flex justify-between">
+               <div class="flex flex-col lg:flex-row justify-between">
              
                <!-- 1st part -->
                <section class="bg-[#FFFFFF] mb-10  rounded-lg flex-1">
                 <!-- one -->
                  <div class="p-5 mt-5">
-                <div class="flex justify-between">
+                <div class="flex  flex-col lg:flex-row justify-between">
                     <div class="flex gap-4 items-start">
                         <img src="./images/bus-logo.png" alt="">
                         <div>
@@ -282,7 +282,7 @@
                 </div>
                 <hr class="border-dashed bg-[#03071233] mt-4 mb-4">
                  <!-- ----- -->
-                  <div class="flex justify-between">
+                  <div class="flex flex-col lg:flex-row gap-2 justify-between">
                    <button class="btn bg-[#0307120D]">Boarding Point - Laxmipur</button>
                    <button class="btn bg-[#0307120D]">Dropping Point - Bogura</button>
                    <button class="btn bg-[#0307120D]">Est. Time - 11 Hour</button>
@@ -295,11 +295,11 @@
                 <div></div>
                </section>
                <!-- 2nd part -->
-              <div class="bg-[#FFFFFF] mb-10  ">
+              <div class="bg-[#FFFFFF] mb-10 hidden lg:block">
                 <img  src="./images/info-devider.png" alt="">
               </div>
               <!-- 3rd part -->
-               <div class="flex flex-col items-center justify-center gap-2 bg-[#FFFFFF] pl-5 pr-10  mb-10">
+               <div class="flex flex-col items-center justify-center gap-2 bg-[#FFFFFF] pl-5 pr-10 py-3  mb-10">
                 <img src="./images/fare.png" alt="">
                 <h3 class="text-3xl font-bold text-[#030712]">550 Taka</h3>
                 <p class="text-2xl font-normal text-[#03071299]">Per Seat</p>
@@ -308,6 +308,13 @@
               </div>
         </div>
       </section>
+
+      <!-- seat design section  -->
+       <section class="container mx-auto">
+                <div>
+                  <button id="A1" class="btn bg-[#F7F8F8] px-5 py-3 text-[#03071280]">A1</button>
+                </div>
+       </section>
     </main>
     <footer></footer>
 
