@@ -7,3 +7,15 @@ body{
 .font_family_Inter{
     font-family: "Inter", sans-serif;
 }
+
+
+
+/* selected btn  */
+.selected {
+    background-color: #1DD100;
+    color: white;
+  }
+
+.btn:hover{
+    background-color: #1DD100;
+}
