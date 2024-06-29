@@ -275,7 +275,7 @@
                     class="flex gap-2 items-center bg-[#1DD10026] p-5 rounded"
                   >
                     <img src="./images/seat-green.png" alt="" />
-                    <p class="text-2xl font-medium text-[#1DD100]">40</p>
+                    <p id="total_seat" class="text-2xl font-medium text-[#1DD100]">40</p>
                     <p class="text-2xl font-medium text-[#1DD100]">
                       Seats left
                     </p>
@@ -820,7 +820,7 @@
           <hr class="border-dashed bg-[#03071233] mt-4 mb-4" />
           <div class="bg-[#F7F8F8] rounded-xl p-5">
               <div class="flex justify-between">
-                <h2 class="text-[16px] font-medium text-[#030712]">Seat</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">Seat <span id="seat_count" class="bg-[#1DD100] px-2 rounded text-white">0</span></h2>
                 <h2 class="text-[16px] font-medium text-[#030712]">Class</h2>
                 <h2 class="text-[16px] font-medium text-[#030712]">Price</h2>
               </div>
@@ -833,7 +833,7 @@
               <!-- total calculation  -->
               <div class="flex justify-between">
                 <h2 class="text-[16px] font-medium text-[#030712]">Total Price</h2>
-                <h2 class="text-[16px] font-medium text-[#030712]">BDT 1100</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">BDT <span id="total_price_Id">000</span></h2>
               </div>
               <!-- cupupon code apply  -->
                <div class="mt-5 flex flex-col lg:flex-row justify-center items-center bg-white p-2 rounded-xl">
@@ -861,10 +861,10 @@
             <!-- ----------- -->
             <label class="form-control w-full p">
               <div class="label">
-                <span class="label-text text-[16px] font-semibold text-[#030712]">Phone Number*</span>
+                <span  class="label-text text-[16px] font-semibold text-[#030712]">Phone Number*</span>
               </div>
-              <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full p" required />
-              <div class="label">
+              <input id="phone_number" type="text" placeholder="Enter your phone number" class="input input-bordered w-full p" maxlength="11" required />
+              <div class="label" >
               </div>
             </label>
             <!-- ------------- -->
@@ -878,7 +878,7 @@
             </label>
            </div>
             <div class="w-full">
-              <button class="btn bg-[#1DD100] w-full">Next</button>
+              <button id="buy_ticket" class="btn bg-[#1DD100] w-full" disabled>Next</button>
             </div>
             <!-- Terms and Conditions -->
             <div class="mt-5 flex justify-around">
