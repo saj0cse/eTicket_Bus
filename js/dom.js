@@ -1,13 +1,10 @@
-let countSeat =0;
+let countSeat = 0;
 
 function toggleSelect(btnId) {
   const button = document.getElementById(btnId);
 
-  // show alert maximum seat selected
-  
+    // show alert maximum seat selected
   const selectedSeats = document.querySelectorAll(".selected");
-  
-  
   if (selectedSeats.length >= 4 && !button.classList.contains("selected")) {
     alert("You can only select a maximum of 4 seats.");
     return;
@@ -17,21 +14,13 @@ function toggleSelect(btnId) {
     button.classList.remove("selected");
     removeSeatDetails(btnId);
     updateSeatPrice(-550);
+    countSeatFunction(-1)
   } else {
     button.classList.add("selected");
     createSeatDetails(btnId);
     updateSeatPrice(550);
-    const seatCountDisplay = document.getElementById('seat_count');
-    
-    // count seat 
-    countSeat = countSeat + 1;
-    seatCountDisplay.textContent = countSeat;
-
-    // minus total seat to selected seat 
-    const totalSeatId = document.getElementById('total_seat');
-    let totalSeat = parseInt(totalSeatId.innerText);
-    let minusSeat = totalSeat - 1 ;
-    totalSeatId.textContent = minusSeat;
+    countSeatFunction(1)
+  
   }
 
   toggleProceedButton();
@@ -98,6 +87,26 @@ function removeSeatDetails(btnId) {
 //   update price function
 let totalSeatPrice = 0;
 function updateSeatPrice(amount) {
+  console.log(amount);
   totalSeatPrice += amount;
   document.getElementById("total_price_Id").textContent = totalSeatPrice;
 }
+
+
+
+// count seat
+function countSeatFunction(seat) {
+  countSeat = countSeat + seat;
+  const seatCountDisplay = document.getElementById("seat_count");
+  seatCountDisplay.textContent = countSeat;
+
+// minusSeat function
+  const totalSeatId = document.getElementById("total_seat");
+  let totalSeat = parseInt(totalSeatId.innerText);
+  let minusSeat = totalSeat - seat;
+  totalSeatId.textContent = minusSeat;
+}
+
+
+
+
