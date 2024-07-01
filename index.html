@@ -865,25 +865,39 @@
                   BDT <span id="total_price_Id">000</span>
                 </h2>
               </div>
-              <!-- cupupon code apply  -->
-              <div
+           
+               <!-- discount amount  -->
+               <div class="flex justify-between mt-3 hidden" id="discount_amount_div">
+                <h2 class="text-[16px] font-medium text-[#03071299]">
+                  Discount Amount
+                </h2>
+                <h2 class="text-[16px] font-medium text-[#03071299]">
+                  BDT <span id="discount_amount_id">000</span>
+                </h2>
+              </div>
+               
+                 <!-- cupupon code apply  -->
+              <div 
+              id="coupon_code_div"
                 class="mt-5 flex flex-col lg:flex-row justify-center items-center bg-white p-2 rounded-xl"
               >
                 <input
                   class="p-3 flex-1 rounded"
                   type="text"
                   name=""
-                  id=""
-                  placeholder="Have any copupon?"
+                  id="coupon_input_field"
+                  placeholder="Have any coupon?"
                 />
-                <button class="btn bg-[#1DD100] px-8" disabled>Apply</button>
+                <button id="coupon_apply_btn" class="btn bg-[#1DD100] px-8" onclick="discountAmountCal()"  disabled>Apply</button>
               </div>
+
+
               <!-- Grand total calculation  -->
               <div class="flex justify-between mt-5">
                 <h2 class="text-[16px] font-medium text-[#030712]">
                   Grand Total
                 </h2>
-                <h2 class="text-[16px] font-medium text-[#030712]">BDT 1100</h2>
+                <h2 class="text-[16px] font-medium text-[#030712]">BDT <span id="grand_total_price_id">000</span></h2>
               </div>
             </div>
 
@@ -951,7 +965,7 @@
              
             </form>
             <!-- Terms and Conditions -->
-            <div class="mt-5 flex justify-around">
+            <div class="mt-5 flex flex-col md:flex-row lg:flex-row justify-between">
               <a
                 href=""
                 class="text-[16px] font-semibold text-[#03071299] underline"
@@ -1011,9 +1025,9 @@
             <div>
               @all rights reserved, eTicket Bus services limited.2024
             </div>
-            <div class="mt-5 lg:mt-0">
+            <div class="mt-5 lg:mt-0 flex flex-col lg:flex-row justify-between gap-4">
               <a href="">Terms & condition</a>
-               <a class="p-4" href="">Return & refund policy</a>
+               <a href="">Return & refund policy</a>
                 <a href="">Privacy policy</a>
             </div>
           </div>

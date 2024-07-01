@@ -37,9 +37,11 @@ document
 function toggleProceedButton() {
   const selectedSeats = document.querySelectorAll(".selected");
   const proceedButton = document.getElementById("buy_ticket");
+  const couponApplyBtn = document.getElementById("coupon_apply_btn");
   proceedButton.disabled = !(
     selectedSeats.length > 0 && phoneNumber.length === 11
   );
+  couponApplyBtn.disabled = !(selectedSeats.length >= 4);
 }
 
 // create seat details
@@ -85,10 +87,12 @@ function removeSeatDetails(btnId) {
 
 //   update price function
 let totalSeatPrice = 0;
+const grandTotalPrice = document.getElementById("grand_total_price_id");
 function updateSeatPrice(amount) {
   console.log(amount);
   totalSeatPrice += amount;
   document.getElementById("total_price_Id").textContent = totalSeatPrice;
+  grandTotalPrice.textContent = totalSeatPrice;
 }
 
 // count seat
@@ -104,14 +108,43 @@ function countSeatFunction(seat) {
   totalSeatId.textContent = minusSeat;
 }
 
+// buy btn function
+function confirmFunction() {
+  const buyTicket = document.getElementById("buy_ticket");
+  const confirmTicket = document.getElementById("confirm_ticket");
 
-// buy btn function 
-function confirmFunction(){
-  const buyTicket = document.getElementById('buy_ticket');
-  const confirmTicket = document.getElementById('confirm_ticket');
-
-  buyTicket.classList.add('hidden');
-  confirmTicket.classList.remove('hidden');
+  buyTicket.classList.add("hidden");
+  confirmTicket.classList.remove("hidden");
 }
+
+// coupon_input_field
+const couponApplyBtn = document.getElementById("coupon_apply_btn");
+
+document
+  .getElementById("coupon_input_field")
+  .addEventListener("keyup", function (event) {
+    const couponInputFiledValue = event.target.value;
+    console.log(couponInputFiledValue);
+    const couponApplyBtn = document.getElementById("coupon_apply_btn");
+    couponApplyBtn.disabled = !(
+      couponInputFiledValue === "NEW15" || couponInputFiledValue === "Couple 20"
+    );
+  });
+
+    //  discount amount calculation
+    function discountAmountCal() {
+      const couponInputFiledValue = document.getElementById("coupon_input_field").value;
+      const discountAmountUpdate = document.getElementById('discount_amount_id');
+      const discountAmountDiv = document.getElementById('discount_amount_div');
+      const couponCodeDiv = document.getElementById('coupon_code_div');
+      if (couponInputFiledValue === "NEW15") {
+            const discountAmount = (totalSeatPrice * 15 ) / 100 ;
+            discountAmountDiv.classList.remove('hidden');
+            couponCodeDiv.classList.add('hidden');
+            discountAmountUpdate.textContent = discountAmount;
+            grandTotalPrice.textContent = totalSeatPrice - discountAmount ;
+      }
+    }
+
 
 
