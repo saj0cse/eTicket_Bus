@@ -117,34 +117,32 @@ function confirmFunction() {
   confirmTicket.classList.remove("hidden");
 }
 
-// coupon_input_field
+
+// // coupon_input_field
 const couponApplyBtn = document.getElementById("coupon_apply_btn");
+    couponApplyBtn.disabled = !(countSeat === 4);
 
-document
-  .getElementById("coupon_input_field")
-  .addEventListener("keyup", function (event) {
-    const couponInputFiledValue = event.target.value;
-    console.log(couponInputFiledValue);
-    const couponApplyBtn = document.getElementById("coupon_apply_btn");
-    couponApplyBtn.disabled = !(
-      couponInputFiledValue === "NEW15" || couponInputFiledValue === "Couple 20"
-    );
-  });
-
-    //  discount amount calculation
-    function discountAmountCal() {
-      const couponInputFiledValue = document.getElementById("coupon_input_field").value;
-      const discountAmountUpdate = document.getElementById('discount_amount_id');
-      const discountAmountDiv = document.getElementById('discount_amount_div');
-      const couponCodeDiv = document.getElementById('coupon_code_div');
-      if (couponInputFiledValue === "NEW15") {
-            const discountAmount = (totalSeatPrice * 15 ) / 100 ;
-            discountAmountDiv.classList.remove('hidden');
-            couponCodeDiv.classList.add('hidden');
-            discountAmountUpdate.textContent = discountAmount;
-            grandTotalPrice.textContent = totalSeatPrice - discountAmount ;
-      }
-    }
-
-
-
+//  discount amount calculation
+function discountAmountCal() {
+  const couponInputFiledValue =
+    document.getElementById("coupon_input_field").value;
+  const discountAmountUpdate = document.getElementById("discount_amount_id");
+  const discountAmountDiv = document.getElementById("discount_amount_div");
+  const couponCodeDiv = document.getElementById("coupon_code_div");
+  
+  if (couponInputFiledValue === "NEW15") {
+    const discountAmount = (totalSeatPrice * 15) / 100;
+    discountAmountDiv.classList.remove("hidden");
+    couponCodeDiv.classList.add("hidden");
+    discountAmountUpdate.textContent = discountAmount;
+    grandTotalPrice.textContent = totalSeatPrice - discountAmount;
+  } else if(couponInputFiledValue === "Couple 20"){
+    const discountAmount = (totalSeatPrice * 20) / 100;
+    discountAmountDiv.classList.remove("hidden");
+    couponCodeDiv.classList.add("hidden");
+    discountAmountUpdate.textContent = discountAmount;
+    grandTotalPrice.textContent = totalSeatPrice - discountAmount;
+  } else{
+    alert("Invalid Coupon");
+  }
+}
